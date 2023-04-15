@@ -1,0 +1,45 @@
+--Create a store database
+
+
+
+
+CREATE TABLE sublimation_items (id INTEGER PRIMARY KEY, price INTEGER, item TEXT, size TEXT, color TEXT, sold INTEGER);
+
+INSERT INTO sublimation_items VALUES (1, 8, "Tumblber", "20 oz.", "white", 10);
+
+INSERT INTO sublimation_items VALUES (2, 5, "Mug", "12 oz.", "black", 5);
+
+INSERT INTO sublimation_items VALUES (3, 3, "Mouse Pad", "Small", "White", 8);
+
+INSERT INTO sublimation_items VALUES (4, 10, "Tumbler", "30 oz.", "White", 15);
+
+INSERT INTO sublimation_items VALUES (5, 8, "T-Shirt", "Small", "White", 22);
+
+INSERT INTO sublimation_items VALUES (6, 8, "T-Shirt", "Medium", "White", 30);
+
+INSERT INTO sublimation_items VALUES (7, 8, "T-Shirt", "Large", "White", 43);
+
+INSERT INTO sublimation_items VALUES (8, 9, "T-Shirt", "X-Large", "White", 55);
+
+INSERT INTO sublimation_items VALUES (9, 9, "T-Shirt", "2XL", "White", 30);
+
+INSERT INTO sublimation_items VALUES (10, 5, "Shot Glass", "N/A", "White", 12);
+
+INSERT INTO sublimation_items VALUES (11, 6, "Heart Ornemant", "3 in.", "Clear", 8);
+
+INSERT INTO sublimation_items VALUES (12, 6, "Round Ornemant", "2.5 in.", "Clear", 9);
+
+INSERT INTO sublimation_items VALUES (13, 5, "Popsicle Holder", "N/A", "White", 200);
+
+INSERT INTO sublimation_items VALUES (14, 5, "Square Magnet", "2.5 in.", "White", 32);
+
+INSERT INTO sublimation_items VALUES (15, 5, "Round Magent", "2.5 in.", "White", 20);
+
+--display the database order by price.
+SELECT * FROM sublimation_items ORDER BY price;
+
+
+--how much money have i made from the items sold?
+SELECT item, price*sold AS total_made FROM sublimation_items ORDER BY total_made;
+
+
